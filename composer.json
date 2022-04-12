@@ -1,0 +1,34 @@
+{
+    "name": "mrvalentin/phpjwt",
+    "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+    "type": "library",
+    "version": "v1.0",
+    "homepage": "https://github.com/ValentinRgt/PHP-JWT",
+    "authors": [
+        {
+            "name": "Valentin R,",
+            "email": "none@none.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "JWT",
+        "JWS",
+        "time",
+        "timestamp",
+        "date",
+        "datetime",
+        "openssl"
+    ],
+    "license": [
+        "BSD-3-Clause"
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mrvalentin\\JWT\\": "src/"
+        }
+    }
+}
