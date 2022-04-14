@@ -16,8 +16,10 @@ class JWT {
         if(!Algorithms::get($algorithm) || Algorithms::get($algorithm)[0] == "unsupported"){ 
             throw new Exception("The requested algorithm does not exist or is unfortunately not supported at the moment."); 
         }
-        if(empty($key)) { throw new Exception("You must pass a passphrase or the private key of your certification to obfuscate the JWT."); }
-
+        if($privateKey == null){
+            if(empty($key)) { throw new Exception("You must pass a passphrase or the private key of your certification to obfuscate the JWT."); }
+        }
+        
         if(isset($payload["iat"])){ throw new Exception("The creation date of the token is implemented by default, you can not duplicate or modify it"); }
 
         $JWTHeader = ["alg" => $algorithm, "typ" => "JWT"];
